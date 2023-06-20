@@ -1,0 +1,26 @@
+body {
+    background-image: url(/To\ Do\ List/img/bg.jpg);
+    font: normal 20pt Arial;
+}
+
+header{
+    text-align: center;
+}
+
+section{
+    background-color: white; /* cor da caixa de fundo */
+    border-radius: 10px; /* deixa as bordas arredondadas */
+    padding: 15px; /* espaço entre conteudo interno e a borda */ 
+    width: 60%; /* espaço das margens esqueda e direita */
+    margin: auto; /* espaço da margem esqueda para a caixa */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.438); /* sombra em baixo da caixa */
+}
+
+select#flista{
+    width: 150px;
+}
+
+footer{
+    text-align: center;
+    font-style: italic;
+}

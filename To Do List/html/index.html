@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="/To Do List/css/estilo.css">
+</head>
+
+<body>
+    <section>
+        <header>
+            <h1>Todo Avançado</h1>
+        </header>
+        <hr>
+
+        <!--Entradas-->
+
+        <div id="adicinar">
+            <p>
+                Adicione sua tarefa
+                <br>
+                <input type="text" name="tarefa" id="tarefa" placeholder="O que você vai fazer?">
+                <input type="button" value="+" onclick="adicionar()" id="badic">
+            </p>
+            <hr>
+
+            <!--Pesquisa das entradas-->
+
+            <div id="pesquisa">
+                <p>
+                    <label for="pesquisa">Pesquisar: </label>
+                    <br>
+                    <input type="search" placeholder="Buscar...">
+                    <input type="button" value=">" onclick="pesquisar()" id="bpesq">
+                </p>
+            </div>
+            <div id="filtro">
+                <p>
+                    <label for="flista">Filtrar: </label>
+                    <br>
+                    <select name="flista" id="flista" aria-placeholder="Todos"></select>
+                </p>
+            </div>
+            <hr>
+
+            <!--Saída-->
+
+            <div id="res">
+
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; DRBreta</p>
+    </footer>
+    <script src="/To Do List/js/script.js"></script>
+</body>
+
+</html>
