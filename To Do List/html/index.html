@@ -6,28 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
+    <!-- CSS do projeto -->
     <link rel="stylesheet" href="/To Do List/css/estilo.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <section>
+    <div class="todo-container">
         <header>
             <h1>Todo Avançado</h1>
         </header>
-        <hr>
 
-        <!--Entradas-->
+        <!-- Entradas -->
 
-        <div id="adicinar">
+        <form id="todo-form">
             <p>
                 Adicione sua tarefa
-                <br>
-                <input type="text" name="tarefa" id="tarefa" placeholder="O que você vai fazer?">
-                <input type="button" value="+" onclick="adicionar()" id="badic">
             </p>
+            <div class="form-control">
+                <input type="text" id="todo-input" placeholder="O que você vai fazer?" />
+                <button type="submit">
+                    <i class="fa-thin fa-plus"></i>
+                </button>
+            </div>
             <hr>
 
-            <!--Pesquisa das entradas-->
+            <!-- Pesquisa das entradas -->
 
             <div id="pesquisa">
                 <p>
@@ -46,16 +53,40 @@
             </div>
             <hr>
 
-            <!--Saída-->
+            <!-- Saída -->
 
             <div id="res">
 
             </div>
+        </form>
+        <form id="edit-form">
+            <p>Edite a sua tarefa:</p>
+            <div class="form-control">
+                <input type="text" id="edit-input" />
+                <button type="submit">
+                    <i class="fa-solid fa-check-double"></i>
+                </button>
+            </div>
+            <button id="cancel-edit-btn">Cancelar</button>
+        </form>
+        <div id="toolbar">
+            <div id="search">
+                <h4>pesquisar:</h4>
+                <form>
+                    <input type="text" id="search-input" placeholder="Buscar" />
+                    <button id="erase-button">
+                        <i class="fa-solid fa-delete-left"></i>
+                    </button>
+                </form>
+            </div>
         </div>
-    </section>
+    </div>
     <footer>
         <p>&copy; DRBreta</p>
     </footer>
+    <!-- O link do java script é carregado no final por causa do DOM que precisa carregar o HTML,
+    se por algum motivo precisar colocar em outro lugar, precisa colocar o defer no scrip 
+    ex <script src="/To Do List/js/script.js" defer></script> -->
     <script src="/To Do List/js/script.js"></script>
 </body>
 
