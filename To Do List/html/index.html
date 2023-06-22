@@ -79,6 +79,51 @@
                     </button>
                 </form>
             </div>
+
+            <!-- Filtragem de tarefas -->
+
+            <div id="filter">
+                <h4>filtrar:</h4>
+                <select id="filter-select">
+                    <option value="all">Todos</option>
+                    <option value="done">Feitos</option>
+                    <option value="todo">A fazer</option>
+                </select>
+            </div>
+        </div>
+        <div id="todo-list">
+            <div class="todo">
+                <h3>Estou fazendo alguma coisa...</h3>
+                <!--Aqui começo a usar class porque o id é unico e esse botão vai se repetir algumas vezes -->
+                <!-- Botão confirmar -->
+                <button class="finish-todo">
+                    <i class="fa-solid fa-check"></i>
+                </button>
+                <!-- Botão editar -->
+                <button class="edit-todo">
+                    <i class="fa-solid fa-pen"></i>
+                </button>
+                <!-- Botão cancelar -->
+                <button class="remove-todo">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="todo">
+                <h3>Estudar Java Script</h3>
+                <!--Aqui começo a usar class porque o id é unico e esse botão vai se repetir algumas vezes -->
+                <!-- Botão confirmar -->
+                <button class="finish-todo">
+                    <i class="fa-solid fa-check"></i>
+                </button>
+                <!-- Botão editar -->
+                <button class="edit-todo">
+                    <i class="fa-solid fa-pen"></i>
+                </button>
+                <!-- Botão cancelar -->
+                <button class="remove-todo">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
         </div>
     </div>
     <footer>
@@ -90,4 +135,4 @@
     <script src="/To Do List/js/script.js"></script>
 </body>
 
-</html>
+</html> 
