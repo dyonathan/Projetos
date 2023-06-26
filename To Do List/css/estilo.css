@@ -1,22 +1,188 @@
 /* Geral */
-*{
-    padding: 0; /* tirando a padding */
-    margin: 0; /* tirando a margem */
-    font-family: Helvetica; 
+* {
+    padding: 0;
+    /* tirando a padding(preenchimento) O preenchimento é usado para criar espaço ao redor do conteúdo de um elemento, dentro de qualquer borda definida. */
+    margin: 0;
+    /* tirando a margem */
+    font-family: Helvetica;
     color: #333;
-    box-sizing: border-box; /* pros inputes não passarem da margem */
-} 
- 
+    box-sizing: border-box;
+    /* pros inputes não passarem da margem */
+}
+
+body {
+    background-image: url(../img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+button {
+    background-color: #fdfdfd;
+    color: #102f5e;
+    border: 2px solid #102f5e;
+    padding: 0.3rem 0.6rem;
+    font-size: 1rem;
+    cursor: pointer;
+    /* faz o cursor mudar quando está em cima do botão */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* centraliza o item no botão */
+    transition: 0.4s;
+    /* Faz uma anição surgindo */
+}
+
+button:hover {
+    background-color: #102f5e;
+    /* Faz o botão ficar azul escuro quando coloca o mouse em cima */
+    color: #fff;
+    /* Deixa as letras brancas, nesse caso só faz efeito no cancelar */
+}
+
+button:hover>i {
+    color: #fff;
+    /* Deixa a cor do icone branco no botão */
+}
+
+button i {
+    color: #102f5e;
+    /* Deixa a cor do botão azul */
+    font-weight: bold;
+    /* Deixa em negrito */
+    /* Com a adição dos icones, eles sobrepoem os botões e quando você clica não está clicando no botão é sim no icone */
+    pointer-events: none;
+    /* Esse comando desativa o clique do icone fazendo o botão funcionar */
+}
 
 
+input,
+select {
+    padding: 0.25rem 0.5rem;
+    /* Faz com que a iscrita dentro dos inputs fiquem fora da borda */
+}
+
+.hide {
+    display: none;
+}
+
+/* Todo header */
+.todo-container {
+    max-width: 450px;
+    margin: 3rem auto;
+    background-color: #fdfdfd;
+    padding: 1.5rem;
+    border-radius: 15px;
+}
 
 
+.todo-container header {
+    /* Cabeçalho do to do */
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid #ccc;
+}
 
+/* To Do Form */
+#todo-form,
+#edit-form {
+    /* Coloca a linha em baixo da parte de adicionar tarefas e da parte de editar */
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+}
 
+#todo-form p,
+#edit-form p {
+    margin-bottom: .5rem;
+    font-weight: bold;
+}
 
+.form-control {
+    /* Controla os botões botões de adicionar tarefa e editar tarefa (mais e dupla checagem */
+    display: flex;
+}
 
+.form-control input {
+    margin-right: .3rem;
+}
 
+#cancel-edit-btn {
+    margin-top: 1rem;
+}
 
+/* To do toolbar */
+#toolbar {
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+}
+
+#toolbar h4 {
+    margin-bottom: .5rem;
+}
+
+#search {
+    border-right: 1px solid #ddd;
+    /* Coloca uma linha vertical entre pesquisar e filtrar */
+    padding-right: 1rem;
+    margin-right: 1rem;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    /* Coloca o pesquisar em cima e o campo de busca em baixo */
+}
+
+#search form {
+    /* Coloca o botão na frente do campo buscar */
+    display: flex;
+}
+
+#search input {
+    width: 100%;
+    margin-right: .3rem;
+}
+
+#filter {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+#filter select {
+    /* Ocupa o espaço disponivel para o select */
+    flex: 1;
+}
+
+/* To Do List  */
+.todo {
+    display: flex;
+    /* Coloca os botões de um lado e o titulo do outro espaçado igualmente */
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    transition: .3s;
+}
+
+.todo h3 {
+    /* Deixa os botos juntos */
+    flex: 1;
+    font-size: .9rem;
+}
+
+.todo button {
+    /* Afasta os botões uns dos outros */
+    margin-left: .4rem; 
+}
+
+.done {
+    background-color: #395169;
+}
+
+.done h3 {
+    color: #fff;
+    text-decoration: line-through; /* Coloca o efeito de linha em cima do texto */
+    font-style: italic;
+}
 
 /*  Fiz sozinho antes só vendo a imagem
 

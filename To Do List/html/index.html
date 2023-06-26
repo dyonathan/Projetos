@@ -32,9 +32,8 @@
                     <i class="fa-thin fa-plus"></i>
                 </button>
             </div>
-            <hr>
 
-            <!-- Pesquisa das entradas -->
+            <!-- Pesquisa das entradas
 
             <div id="pesquisa">
                 <p>
@@ -51,7 +50,7 @@
                     <select name="flista" id="flista" aria-placeholder="Todos"></select>
                 </p>
             </div>
-            <hr>
+            -->
 
             <!-- Saída -->
 
@@ -59,7 +58,7 @@
 
             </div>
         </form>
-        <form id="edit-form">
+        <form id="edit-form" class="hide">
             <p>Edite a sua tarefa:</p>
             <div class="form-control">
                 <input type="text" id="edit-input" />
@@ -71,7 +70,7 @@
         </form>
         <div id="toolbar">
             <div id="search">
-                <h4>pesquisar:</h4>
+                <h4>Pesquisar:</h4>
                 <form>
                     <input type="text" id="search-input" placeholder="Buscar" />
                     <button id="erase-button">
@@ -83,7 +82,7 @@
             <!-- Filtragem de tarefas -->
 
             <div id="filter">
-                <h4>filtrar:</h4>
+                <h4>Filtrar:</h4>
                 <select id="filter-select">
                     <option value="all">Todos</option>
                     <option value="done">Feitos</option>
@@ -92,7 +91,7 @@
             </div>
         </div>
         <div id="todo-list">
-            <div class="todo">
+            <div class="todo done">
                 <h3>Estou fazendo alguma coisa...</h3>
                 <!--Aqui começo a usar class porque o id é unico e esse botão vai se repetir algumas vezes -->
                 <!-- Botão confirmar -->
@@ -135,4 +134,4 @@
     <script src="/To Do List/js/script.js"></script>
 </body>
 
-</html> 
+</html>
