@@ -16,9 +16,9 @@ const saveTodo = (text) => {
     //aqui dentro será criado o template que usa na listagem das taredas com os botões e tudo o a classe da div todo dentro do todo-list
 
     //Cria a div geral dentro do todo
-    const todo = document.createElement("div")
+    const todo = document.createElement("div");
     //Cria a class todo na div 
-    todo.classList.add("todo")
+    todo.classList.add("todo");
 
     //Cria o titulo da div o h3 dentro da div
     const todoTitle = document.createElement("h3");
@@ -69,10 +69,22 @@ const saveTodo = (text) => {
 //Oculta os formularios que estão na tela e mostra os que estão escondidos quando clica em editar
 const toggleForms = () => {
     //editar vem oculto por padrão, quando clicado em editar editform fica a vista e os outros 2 são escondidos
-    editForm.classList.toggle("hide")
-    todoForm.classList.toggle("hide")
-    todoList.classList.toggle("hide")
-}
+    editForm.classList.toggle("hide");
+    todoForm.classList.toggle("hide");
+    todoList.classList.toggle("hide");
+};
+
+const updateTodo = (text) => {
+    const todos = document.querySelectorAll(".todo");
+
+    todos.forEach((todo) => {
+        let todoTitle = todo.querySelector("h3");
+
+        if (todoTitle.innerText === oldInputValue){
+            todoTitle.innerText = text;
+        }
+    });
+};
 
 // Eventos
 todoForm.addEventListener("submit", (e) => {
@@ -121,8 +133,10 @@ document.addEventListener("click", (e) => {
         //Esconde o formulario de adicionar e mostra o de editar e vice-versa
         toggleForms();
 
+        //Recebe o valor que está no h3 no caso a tarefa
         editInput.value = todoTitle;
-        oldInputValue.value = todoTitle;
+        //Salva a ultima tarefa 
+        oldInputValue = todoTitle;
     }
 });
 
@@ -133,3 +147,20 @@ cancelEditBtn.addEventListener("click", (e) => {
 
     toggleForms();
 });
+
+
+//Botão de confirmar dentro do edit-form
+//Essa função troca a tarefa atual pela tarefa editada
+editForm.addEventListener("submit", (e) =>{
+    e.preventDefault();
+
+    //Recebe o valor editado da na lista
+    const editInputValue = editInput.value;
+
+    //Checa se foi confirmado a troca
+    if(editInputValue) {
+        updateTodo(editInputValue);
+    }
+
+    toggleForms();
+})
