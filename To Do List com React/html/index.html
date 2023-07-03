@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List com React</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <!-- Link para icones dos botões -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="todo-container">
+        <header>
+            <h1>Lista de Tarefas</h1>
+        </header>
+
+        <!-- Filtragem de tarefas -->
+
+        <div id="toolbar">
+            <div id="search">
+                <h3>
+                    Pesquisar:
+                </h3>
+                <!-- Falta terminar pois não tem botão para enviar -->
+                <form>
+                    <input type="text" id="search-input" placeholder="Digite para pesquiser">
+                </form>
+            </div>
+
+            <div id="filter">
+                <h3>
+                    Filtrar:
+                </h3>
+                <p>
+                    Status
+                </p>
+                <select id="filter-select">
+                    <option value="all">Todas</option>
+                    <option value="done">Feitos</option>
+                    <option value="todo">A fazer</option>
+                </select>
+            </div>
+
+            <div id="order">
+                <p>
+                    Ordem alfabética
+                </p>
+                <button id="up-button">
+                    Asc
+                </button>
+                <button id="down-button">
+                    Desc
+                </button>
+            </div>
+        </div>
+
+        <!-- Saída -->
+
+        <div id="todo-list">
+
+            <div class="todo">
+                <p>
+                    Criar funcionalidade X no sistema
+                </p>
+                <button class="finish-todo">
+                    Completar
+                </button>
+                <button class="remove-todo">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="todo">
+                <p>
+                    Estudar React
+                </p>
+                <button class="finish-todo">
+                    Completar
+                </button>
+                <button class="remove-todo">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="todo">
+                <p>
+                    Ir para a academia
+                </p>
+                <button class="finish-todo">
+                    Completar
+                </button>
+                <button class="remove-todo">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="todo">
+                <p>
+                    Nova tarefa
+                </p>
+                <button class="finish-todo">
+                    Completar
+                </button>
+                <button class="remove-todo">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Entrada -->
+
+        <form id="todo-form">
+
+        </form>
+
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
