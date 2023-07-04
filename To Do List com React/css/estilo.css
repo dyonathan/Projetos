@@ -1,0 +1,138 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: helvetica;
+    color: #333;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../img/bg.jpeg);
+    background-position: center;
+    background-size: cover;
+
+}
+
+button {
+    background-color: rgb(36, 187, 36);
+    color: #fdfdfd;
+    border: 2px solid rgb(36, 187, 36);
+    padding: 0.1rem 0.2rem;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+/* Cor do icone do botão*/
+button:hover>i {
+    color: #fff;
+}
+
+input,
+select {
+    padding: 0.25rem 0.5rem;
+}
+
+.todo-container {
+    max-width: 600px;
+    margin: 3rem auto;
+    background-color: #bebebe;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+.todo-container header {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+#todo-form,
+#todo-list,
+#filter {
+    padding: 1rem;
+    border-top: 1px solid #ccc;
+}
+
+#todo-form p,
+#todo-list p{
+    margin-bottom: .5rem;
+    font-weight: bold;
+}
+
+.form-control {
+    display: flex;
+}
+
+.form-control input{
+    margin-right: .3rem;
+}
+
+#toolbar {
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    
+}
+
+#toolbar h3 {
+    margin-bottom: .5rem;
+}
+
+#search {
+    border-bottom: 1px solid #ddd;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+#search form {
+    display: flex;
+}
+
+#search input{
+    width: 100%;
+    margin-right: .3rem;
+}
+
+#filter {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+#filter select {
+    flex: 1;
+}
+
+.todo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    /* Fundo */
+    background-color: #fdfdfd;
+    border-radius: 5px;
+    padding: 1rem;
+    transition: .3s;
+    margin-bottom: 7px;
+
+}
+
+.todo h3{
+    flex: 1;
+    font-size: .9rem;
+}
+
+.todo button {
+    margin-left: .4rem;
+}
+
+.done h3 {
+    text-decoration: line-through;
+    font-style: italic;
+}

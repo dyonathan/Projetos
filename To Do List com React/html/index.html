@@ -40,8 +40,8 @@
                 </p>
                 <select id="filter-select">
                     <option value="all">Todas</option>
-                    <option value="done">Feitos</option>
-                    <option value="todo">A fazer</option>
+                    <option value="done">Completas</option>
+                    <option value="todo">Incompletas</option>
                 </select>
             </div>
 
@@ -63,9 +63,10 @@
         <div id="todo-list">
 
             <div class="todo">
-                <p>
+                <h5>
                     Criar funcionalidade X no sistema
-                </p>
+                </h5>
+                
                 <button class="finish-todo">
                     Completar
                 </button>
@@ -75,9 +76,9 @@
             </div>
 
             <div class="todo">
-                <p>
+                <h5>
                     Estudar React
-                </p>
+                </h5>
                 <button class="finish-todo">
                     Completar
                 </button>
@@ -87,9 +88,9 @@
             </div>
 
             <div class="todo">
-                <p>
+                <h5>
                     Ir para a academia
-                </p>
+                </h5>
                 <button class="finish-todo">
                     Completar
                 </button>
@@ -99,9 +100,9 @@
             </div>
 
             <div class="todo">
-                <p>
+                <h5>
                     Nova tarefa
-                </p>
+                </h5>
                 <button class="finish-todo">
                     Completar
                 </button>
@@ -114,7 +115,19 @@
         <!-- Entrada -->
 
         <form id="todo-form">
-
+            <p>
+                Criar tarefa:
+            </p>
+            <div class="form-control">
+                <input type="text" id="todo-input" placeholder="Digite o título">
+                <select id="todo-select" required>
+                    <option value="">Seleciona uma categoria</option>
+                    <option value="trabalho">Trabalho</option>
+                    <option value="pessoal">Pessoal</option>
+                    <option value="estudo">Estudos</option>
+                </select>
+                <button type="button">Criar tarefa</button>
+            </div>
         </form>
 
     </div>
