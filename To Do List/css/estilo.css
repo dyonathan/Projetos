@@ -22,8 +22,8 @@ button {
     border: 2px solid #102f5e;
     padding: 0.3rem 0.6rem;
     font-size: 1rem;
-    cursor: pointer;
     /* faz o cursor mudar quando está em cima do botão */
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,8 +121,8 @@ select {
 }
 
 #search {
-    border-right: 1px solid #ddd;
     /* Coloca uma linha vertical entre pesquisar e filtrar */
+    border-right: 1px solid #ddd;
     padding-right: 1rem;
     margin-right: 1rem;
     width: 65%;
@@ -154,8 +154,8 @@ select {
 
 /* To Do List  */
 .todo {
-    display: flex;
     /* Coloca os botões de um lado e o titulo do outro espaçado igualmente */
+    display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
