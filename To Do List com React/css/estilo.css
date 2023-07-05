@@ -10,7 +10,6 @@ body {
     background-image: url(../img/bg.jpeg);
     background-position: center;
     background-size: cover;
-
 }
 
 button {
@@ -26,92 +25,96 @@ button {
     transition: 0.4s;
 }
 
-/* Cor do icone do botão*/
-button:hover>i {
-    color: #fff;
-}
-
 input,
 select {
     padding: 0.25rem 0.5rem;
+    border: #ffffff;
 }
 
 .todo-container {
     max-width: 600px;
     margin: 3rem auto;
-    background-color: #bebebe;
-    padding: 1.5rem;
+    background-color: #ebedf0;
+    padding: 2rem;
     border-radius: 1rem;
 }
 
 .todo-container header {
     text-align: center;
+}
+
+.todo-container h2 {
+    margin: 1rem 0 0 0;
+    color: #444444;
+}
+
+.todo-container h3 {
+    margin: 0 0 10px 0;
+    color: #7c7c7c;
+}
+
+#search {
+    border-bottom: 1px solid #7c7c7c;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#search form {
+    padding-top: 10px;
+    display: flex;
+}
+
+#search input {
+    width: 100%;
+    margin: 0 0 1.5rem 0;
+}
+
+/* Espaço em cima do filtar por estar fora do toolbar */
+.todo-container h3 {
+    margin-top: 5px;
+}
+
+#toolbar {
+    padding: 1rem 0 1rem 0;
+    display: flex;
+    /* Não consegui o espaço do exemplo, até consegui mas fica errado o select quando aberto */
+    /* justify-content: space-between; */
+}
+
+#toolbar p {
+    margin-bottom: .5rem;
+}
+
+#toolbar button {
+    display: inline;
+    background-color: rgb(74, 53, 165);
+    border: 3px solid rgb(74, 53, 165);
+}
+
+#toolbar select {
+    padding-right: 10rem;
+}
+
+#toolbar div#order {
+    margin-left: 3rem;
+}
+
+#todo-list {
+    padding-top: 1rem;
     padding-bottom: 1rem;
+    border-top: 1px solid #7c7c7c;
 }
 
-#todo-form,
-#todo-list,
-#filter {
-    padding: 1rem;
-    border-top: 1px solid #ccc;
-}
-
-#todo-form p,
-#todo-list p{
+#todo-list p,
+#todo-form p {
     margin-bottom: .5rem;
     font-weight: bold;
 }
 
-.form-control {
+.todo {
     display: flex;
-}
-
-.form-control input{
-    margin-right: .3rem;
-}
-
-#toolbar {
-    padding: 1rem;
-    border-bottom: 1px solid #ccc;
-    
-}
-
-#toolbar h3 {
-    margin-bottom: .5rem;
-}
-
-#search {
-    border-bottom: 1px solid #ddd;
-    padding-right: 1rem;
-    margin-right: 1rem;
-    width: 65%;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
-}
-
-#search form {
-    display: flex;
-}
-
-#search input{
-    width: 100%;
-    margin-right: .3rem;
-}
-
-#filter {
-    width: 35%;
-    display: flex;
-    flex-direction: column;
-}
-
-#filter select {
-    flex: 1;
-}
-
-.todo{
-    display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 1rem;
     /* Fundo */
@@ -120,19 +123,52 @@ select {
     padding: 1rem;
     transition: .3s;
     margin-bottom: 7px;
-
 }
 
-.todo h3{
+.todo div.btn-todo {
+    display: flex;
+}
+
+/* Cor do icone do botão */
+.todo button i {
+    color: #ffffff;
+}
+
+/* Cor do botão remove */
+.todo button.remove-todo {
+    background-color: #da2727;
+    color: #fdfdfd;
+    border: 2px solid #da2727;
+    margin-left: 5px;
+}
+
+.todo h3 {
     flex: 1;
     font-size: .9rem;
 }
 
+/*
 .todo button {
     margin-left: .4rem;
 }
+*/
 
-.done h3 {
+.done p {
     text-decoration: line-through;
     font-style: italic;
+}
+
+#todo-form {
+    border-top: 1px solid #7c7c7c;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0 1rem 0;
+}
+
+#todo-form button {
+    background-color: rgb(74, 53, 165);
+    border: 3px solid rgb(74, 53, 165);
 }
