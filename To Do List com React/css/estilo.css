@@ -142,9 +142,11 @@ select {
     margin-left: 5px;
 }
 
-.todo h3 {
-    flex: 1;
-    font-size: .9rem;
+
+
+.todo p {
+    display: flex;
+    font-size: 1rem;
 }
 
 /*
@@ -156,6 +158,10 @@ select {
 .done p {
     text-decoration: line-through;
     font-style: italic;
+}
+
+.hide {
+    display: done;
 }
 
 #todo-form {
