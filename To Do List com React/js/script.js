@@ -1,3 +1,6 @@
-const doneBtn = document.getElementsByClassName("finish-todo");
+const doneBtn = document.querySelector('.finish-todo');
 
-console.log("doneBtn")
+doneBtn.addEventListener('click', function() {
+    console.log("funfa")
+});
+
