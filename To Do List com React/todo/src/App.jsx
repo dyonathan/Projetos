@@ -34,7 +34,7 @@ function App() {
       <h1>Lista de Tarefas</h1>
       <div className="todo-list">
         {todos.map((todo) => (
-          <Todo todo={todo} />
+          <Todo todo = {todo} />
         ))}
       </div>
       <TodoForm />
