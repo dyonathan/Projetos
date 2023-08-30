@@ -5,36 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
-    <link rel="script" href="script.js">
-    <title>Calculador</title>
+    <title>Calculadora</title>
 </head>
 
 <body>
-    <header>
-        <h1>Calculadora</h1>
-    </header>
-    <div id="numeros">
-        <button value="1">1</button>
-        <button value="2">2</button>
-        <button value="3">3</button>
-        <button value="4">4</button>
-        <button value="5">5</button>
-        <button value="6">6</button>
-        <button value="7">7</button>
-        <button value="8">8</button>
-        <button value="9">9</button>
-        <button value="0">0</button>
-    </div>
-    <div id="operadores">
-        <button value="">+</button>
-        <button value="">-</button>
-        <button value="">/</button>
-        <button value="">*</button>
-    </div>
-    <div id="resultado">
-        <input type="number">
-        <button value="=">=</button>
-    </div>
+    <div class="calculator">
+        <header>
+            <h1>Calculadora</h1>
+        </header>
+        <div id="display">
+            <input type="number">
+        </div>
+        <div class="btn">
+            <button value="%">%</button>
+            <button value="">√</button>
+            <button value="">X²</button>
+            <button value="">1/X</button>
+            
+            <button value="">CE</button>
+            <button value="">C</button>            
+            <button value=""><-</button>                        
+            <button value="div">/</button>
+
+            <button value="7">7</button>
+            <button value="8">8</button>
+            <button value="9">9</button>            
+            <button value="mult">*</button>
+            
+            <button value="4">4</button>
+            <button value="5">5</button>
+            <button value="6">6</button>
+            <button value="sub">-</button>
+
+            <button value="1">1</button>
+            <button value="2">2</button>
+            <button value="3">3</button>
+            <button value="soma">+</button>
+
+            <button value="">±</button>
+            <button value="0">0</button>
+            <button value=".">.</button>
+            <button value="=">=</button>
+            
+        </div>
+        <script src="script.js"></script>
 </body>
 
 </html>
