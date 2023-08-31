@@ -1,7 +1,7 @@
 //Obtendo os elementos de botões da calculadora e o display
 const buttons = document.querySelectorAll('.calculator button');
 const display = document.querySelector('.calculator #display');
-//let currentInput = ''; // Armazena o numero atual no display
+let currentInput = ''; // Armazena o numero atual no display
 
 function handleClick(event) {
     const buttonValue = event.target.textContent;
@@ -31,29 +31,29 @@ buttons.forEach(button => {
 
 // Calculos
 
-function soma(a, b) {
-    return a + b;
+function soma(operand1, operand2) {
+    return operand1 + operand2;
 };
 
-function sub(a, b) {
-    return a - b;
+function sub(operand1, operand2) {
+    return operand1 - operand2;
 };
 
-function div(a, b) {
-    return a / b;
+function div(operand1, operand2) {
+    return operand1 / operand2;
 };
 
-function mult(a, b) {
-    return a * b;
+function mult(operand1, operand2) {
+    return operand1 * operand2;
 };
 
-function perc(a) {
-    return perc
-}
+function perc(operand1) {
+    return perc(operand1);
+};
 
 function CE(){
-    return clearInterval
-}
+    return clearInterval;
+};
 
 function calculateResult(expression){
     // Analise a expressão para obter os operandos e a operação
@@ -65,7 +65,7 @@ function calculateResult(expression){
     const operand2 = parseFloat(expressionParts[1]);
     const operator = expression.includes('+') ? '+': ('-') ? '-': ('/') ? '/': ('*') ? '*':
     
-    let result;
+    //let result;
 
     if (operator === '+'){
         result = soma(operand1, operand2);
@@ -79,6 +79,6 @@ function calculateResult(expression){
         result = perc(operand1);
     }
 
-    }
+    return result;
 
 }
