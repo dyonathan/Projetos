@@ -7,6 +7,7 @@ import "./App.css";
 
 
 function App() {
+  //Com o todos eu busco os dados com o setTodos eu coloco os dados
   const [todos, setTodos] = useState([
     {
       id: 1,
@@ -34,12 +35,13 @@ function App() {
       <h1>Lista de Tarefas</h1>
       <div className="todo-list">
         {todos.map((todo) => (
-          <Todo todo = {todo} />
+          // eslint-disable-next-line react/jsx-key
+          <Todo todo={todo} />
         ))}
       </div>
       <TodoForm />
     </div>
-  )
+  );
 }
 
 export default App

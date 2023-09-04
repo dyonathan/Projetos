@@ -44,6 +44,7 @@ button{
   transition: 0.3s;
 }
 
+/* Quando coloca o mouse em cima do botão fica mais escuro */
 button:hover {
   opacity: 1;
 }

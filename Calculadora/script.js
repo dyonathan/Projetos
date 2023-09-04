@@ -20,7 +20,7 @@ function handleClick(event) {
         // adicionar valor do botão na tela
         currentInput += buttonValue;
         display.textContent = currentInput;
- 
+
     }
 }
 
@@ -51,11 +51,11 @@ function perc(operand1) {
     return perc(operand1);
 };
 
-function CE(){
+function CE() {
     return clearInterval;
 };
 
-function calculateResult(expression){
+function calculateResult(expression) {
     // Analise a expressão para obter os operandos e a operação
     // Chame a função apropriada com os operandos para realizar o cálculo
     // Retorne o resultado
@@ -63,20 +63,19 @@ function calculateResult(expression){
     const expressionParts = expression.split('+');
     const operand1 = parseFloat(expressionParts[0]);
     const operand2 = parseFloat(expressionParts[1]);
-    const operator = expression.includes('+') ? '+': ('-') ? '-': ('/') ? '/': ('*') ? '*':
-    
-    //let result;
+    //const operator = expression.includes('+') ? '+': ('-') ? '-': ('/') ? '/': ('*') ? '*':
+    let operator;
 
-    if (operator === '+'){
-        result = soma(operand1, operand2);
-    } else if (operator === '-'){
-        result = sub(operand1, operand2);
-    } else if (operator === '/'){
-        result = div(operand1, operand2);
-    } else if (operator === '*'){
-        result = mult(operand1, operand2);
-    } else if (operator === '%'){
-        result = perc(operand1);
+    if (expression.includes('+')) {
+        operator = '+';
+    } else if (expression.includes('-')) {
+        operator = '-';
+    } else if (expression.includes('*')) {
+        operator = '*';
+    } else if (expression.includes('/')) {
+        operator = '/';
+    } else if (expression.includes('%')) {
+        operator = '%';
     }
 
     return result;
