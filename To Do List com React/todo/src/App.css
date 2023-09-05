@@ -33,7 +33,7 @@ input {
 }
 
 
-button{
+button {
   background-color: #333974;
   color: #fff;
   padding: 5px 10px;
@@ -42,11 +42,31 @@ button{
   cursor: pointer;
   opacity: 0.8;
   transition: 0.3s;
+  margin-right: 10px;
 }
 
 /* Quando coloca o mouse em cima do botão fica mais escuro */
 button:hover {
   opacity: 1;
+}
+
+.todo-list {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #555;
+}
+
+.todo {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  /* Organiza na horizontal */
+  align-items: center;
+  /* Organiza na vertical */
 }
 
 .complete {
@@ -57,14 +77,32 @@ button:hover {
   background-color: #d9534f;
 }
 
-.todo-form{
+.todo-form {
   padding-bottom: 1.5rem;
 }
 
-input, select{
+input,
+select {
   padding: 5px;
   margin-bottom: 10px;
   border: 1px solid #ddd;
   border-radius: 3px;
   width: 100%;
+}
+
+.filter,
+.search {
+  border-bottom: 1px solid #555;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.filter-options {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.filter-options div {
+  flex: 1 1 0;
 }
