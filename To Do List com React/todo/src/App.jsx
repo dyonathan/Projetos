@@ -8,8 +8,6 @@ import Filter from './components/Filter';
 import "./App.css";
 
 
-
-
 function App() {
   //Com o todos eu busco os dados com o setTodos eu coloco os dados
   const [todos, setTodos] = useState([
