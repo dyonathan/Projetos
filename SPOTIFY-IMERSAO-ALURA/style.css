@@ -16,9 +16,16 @@ h1{
 }
 
 .sidebar__navigation{
+    display: flex;
+    flex-direction: column;    
+}
+
+.sidebar__navigation .navigation{
     background-color: #121212;
     border-radius: 8px;
-    padding: 16px 0 0 16px;
+    margin-bottom: 7px;
+    height: 156px;
+    width: 420px;
 
 }
 
@@ -47,4 +54,13 @@ h1{
     font-weight: 600;
     font-size: 14px;
     font-family: "DM Sans", sans-serif;
+}
+
+.sidebar__navigation .library__botton{
+    display: flex;
+    flex-direction: column;
+    background-color: #121212;
+    border-radius: 8px;
+    padding: 16px 0 0 16px;
+
 }
