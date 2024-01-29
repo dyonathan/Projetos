@@ -2,7 +2,6 @@
   background-color: #121212;
   display: flex;
   justify-content: space-between;
-  background-color: ;
   position: fixed;
   top: 12px;
   left: 324px;
@@ -20,7 +19,7 @@
 }
 
 .header .header__content button{
-  align-content: first baseline;
+  align-content: center;
   
 
 }
