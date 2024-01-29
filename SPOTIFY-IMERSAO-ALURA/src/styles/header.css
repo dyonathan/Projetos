@@ -12,4 +12,20 @@
 
 .header .header__content{
   
+  background-color: aqua;
+  display: flex;
+  width: 100%;
+  justify-items: center;
+  
+}
+
+.header .header__content button{
+  align-content: first baseline;
+  
+
+}
+
+.header .header__content img{
+  display: flex;
+  align-self: center;
 }

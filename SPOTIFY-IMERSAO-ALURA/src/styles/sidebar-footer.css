@@ -180,7 +180,7 @@ body {
     gap: 24px;
     color: #fff;
     position: fixed;
-    width: 100%;
+    width: 97%;
     z-index: 1;
     cursor: pointer;
 }
@@ -188,14 +188,18 @@ body {
 .footer .footer__content {
     display: flex;
     flex-direction: column;
-
+    font: "DM Sans", sans-serif;
     width: 100%;
 }
 
 .footer .footer__button {
+    font-weight: 700;
+    font-size: 0.8rem;
     border-radius: 20px;
     border: 0px;
-    height: 30px;
+    height: 2.5rem;
     cursor: pointer;
-
+    width: 10rem;
+    font: "DM Sans", sans-serif;
 }
+
