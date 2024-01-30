@@ -80,8 +80,9 @@ body {
 
 .library .library__button .fa {
     font-size: 20px;
-    margin-right: 10px;
     /*font-weight: 300; quando coloco o weight buga o icone*/
+    color: #b3b3b3;
+    margin-right: 10px;
     padding-right: 8px;
 }
 
@@ -93,8 +94,7 @@ body {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 20px;
-    /*gap fala o damanho do space-between */
+    gap: 20px; /*gap fala o damanho do space-between */
     background-color: #242424;
     color: #b3b3b3;
     font-weight: 600;

@@ -1,13 +1,14 @@
 /* HEADER */
 
-.main-container{
-    max-width: 80vw; /* vw = view port 80% da tela responsivamente */
+.main-container {
+    max-width: 80vw;
+    /* vw = view port 80% da tela responsivamente */
     height: 100vw;
     margin-left: 320px;
     margin-right: 56px;
 }
 
-.header__navigation{
+.header__navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,19 +16,21 @@
     margin: 10px;
     border-radius: 8px;
     background-color: #121212;
+    padding: 12px;
 }
 
-.header__navigation .navigation{
+.header__navigation .navigation {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.header__navigation .navigation .arrow-left{
+.header__navigation .navigation .arrow-left {
     margin-right: 1.25rem;
 }
 
-.arrow-left, .arrow-right{
+.arrow-left,
+.arrow-right {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,12 +43,12 @@
     cursor: pointer;
 }
 
-.header__login{
+.header__login {
     display: flex;
     align-items: center;
 }
 
-.header__search{
+.header__search {
     display: flex;
     align-items: center;
     width: 364px;
@@ -56,38 +59,205 @@
     border: 1px solid transparent;
 }
 
-.header__search img{
+.header__search img {
     width: 16px;
     height: 16px;
     margin-left: 10px;
 }
 
 
-.header__search input{
+.header__search input {
     background: transparent;
     border: none;
     padding: 0px 100px 0 12px;
     color: #fff;
-    text-overflow: ellipsis; /* quando o texto é muito grande deixa 3 pontinhos no lugar da quebra de linha*/
-    overflow: hidden; /* trabalha junto com o text-overflow para não estourar a linha */ 
-    white-space: nowrap; /* obriga o texto a ficar em uma linha só */
-    outline: none; /* esconde a borda retangular que aparece no input */
+    text-overflow: ellipsis;
+    /* quando o texto é muito grande deixa 3 pontinhos no lugar da quebra de linha*/
+    overflow: hidden;
+    /* trabalha junto com o text-overflow para não estourar a linha */
+    white-space: nowrap;
+    /* obriga o texto a ficar em uma linha só */
+    outline: none;
+    /* esconde a borda retangular que aparece no input */
 }
 
-.header__login .subscribe{
+.header__login .subscribe {
     color: #a7a7a7;
     font-size: 16px;
     font-weight: 700;
     background-color: transparent;
     margin-right: 32px;
-    border: 0px;
 }
 
-.header__login .login{
+.header__login .login {
     width: 100px;
     height: 48px;
     color: #000;
     font-size: 16px;
     font-weight: 700;
     border-radius: 40px;
+}
+
+/* PLAYLIST */
+.playlist-container {
+    height: 68vh;
+    padding-top: 16px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #121212;
+}
+
+.playlist {
+    margin: 24px;
+}
+
+.playlist #greeting {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 48px;
+}
+
+.playlist .session {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* SCROLL */
+.offer__scroll-container {
+    max-height: 43vh;
+    margin: 24px;
+    overflow: auto;
+}
+
+.offer__scroll-container::-webkit-scrollbar {
+    width: 1px;
+}
+
+.offer__scroll-container::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+/* FIM SCROLL */
+
+.offer__list-item {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 16px;
+    gap: 16px;
+    margin-bottom: 16px;
+
+    /* CODIGO COM JS CALCULANDO OS CARDS POR COLUNA */
+    display: grid;
+    gap: 16px;
+    grid-gap: 32px;
+    margin: 0 auto;
+}
+
+.cards {
+    position: relative;
+    width: 220px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.cards span {
+    padding: 16px;
+    position: absolute;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* COLOR CARDS */
+.card1 {
+    background-color: rgb(0, 100, 80);
+}
+
+.card2 {
+    background-color: rgb(132, 0, 231);
+}
+
+.card3 {
+    background-color: rgb(30, 50, 100);
+}
+
+.card4 {
+    background-color: rgb(140, 25, 50);
+}
+
+.card5 {
+    background-color: rgb(232, 17, 91);
+}
+
+.card6 {
+    background-color: rgb(83, 122, 161);
+}
+
+.card7 {
+    background-color: rgb(142, 102, 172);
+}
+
+.card8 {
+    background-color: rgb(20, 138, 8);
+}
+
+.card9 {
+    background-color: rgb(30, 50, 100);
+}
+
+.card10 {
+    background-color: rgb(233, 20, 41);
+}
+
+.card11 {
+    background-color: rgb(80, 55, 80);
+}
+
+.card12 {
+    background-color: rgb(216, 64, 0);
+}
+
+.card13 {
+    background-color: rgb(186, 93, 7);
+}
+
+.card14 {
+    background-color: rgb(0, 30, 80);
+}
+
+.card15 {
+    background-color: rgb(60, 30, 80);
+}
+/* FIM COLOR CARDS */
+
+.offer__list-item img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    width: 107px;
+    transform: rotate(25deg) translate(18%, -2%);
+}
+
+/* CARD ARTISTA */
+
+.artist{
+    --column-count: 5;
+    --grid-gap: 24px;
+    --min-container-widht: 372px;
+}
+
+.hidden{
+    display: none;
+}
+
+.drid-container{
+    grid-gap: 24px;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    min-width: 767px;
 }
